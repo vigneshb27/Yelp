@@ -1,0 +1,43 @@
+<% layout('layouts/boilerplate')%>
+
+<div id="cluster-map"></div>
+<div class="container">
+    <h1>All Rooms</h1>
+    <div>
+        <a href="/rooms/new">Add Room</a>
+    </div>
+        <% for(let room of rooms){ %>
+            <div class="card mb-3" >
+            <div class="row">
+                    <div class="col-md-4">
+                        <% if (room.images.length) { %>
+                            <img class="img-fluid" alt="" src="<%=room.images[0].url%>">
+                        <% } %>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%= room.title %>
+                            </h5>
+                            <p class="card-text">
+                                <%= room.description %>
+                            </p>
+                            <p class="card-text">
+                                <small class="text-muted">
+                                    <%= room.location%>
+                                </small>
+                            </p>
+                            <a class="btn btn-primary" href="/rooms/<%=room._id%>">View
+                                <%=room.title%></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+        </div>
+        <script>
+            const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
+            const rooms = { features: <%- JSON.stringify(rooms) %>}
+        </script>
+        
+        <script src="/javascripts/clusterMap.js"></script> 
