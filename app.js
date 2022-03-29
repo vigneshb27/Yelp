@@ -22,9 +22,11 @@ const MongoStore = require('connect-mongo');
 
 const userRoutes = require('./routes/users');
 const campgroundRoutes = require('./routes/campgrounds');
-const roomRoutes = require('./routes/rooms')
 const campReviewRoutes = require('./routes/reviews/campground');
+const roomRoutes = require('./routes/rooms')
 const roomReviewRoutes = require('./routes/reviews/room');
+const restaurantRoutes = require('./routes/restaurants')
+const restaurantReviewRoutes = require('./routes/reviews/restaurant');
 
 
 const dbUrl = 'mongodb://127.0.0.1:27017/yelp';//connect env
@@ -143,6 +145,8 @@ app.use('/campgrounds', campgroundRoutes)
 app.use('/campgrounds/:id/reviews', campReviewRoutes)
 app.use('/rooms', roomRoutes)
 app.use('/rooms/:id/reviews', roomReviewRoutes)
+app.use('/restaurants', restaurantRoutes)
+app.use('/restaurants/:id/reviews', restaurantReviewRoutes)
 
 
 app.get('/', (req, res) => {
