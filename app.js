@@ -27,6 +27,8 @@ const roomRoutes = require('./routes/rooms')
 const roomReviewRoutes = require('./routes/reviews/room');
 const restaurantRoutes = require('./routes/restaurants')
 const restaurantReviewRoutes = require('./routes/reviews/restaurant');
+const gymRoutes = require('./routes/gyms')
+const gymReviewRoutes = require('./routes/reviews/gym');
 
 
 const dbUrl = 'mongodb://127.0.0.1:27017/yelp';//connect env
@@ -147,6 +149,8 @@ app.use('/rooms', roomRoutes)
 app.use('/rooms/:id/reviews', roomReviewRoutes)
 app.use('/restaurants', restaurantRoutes)
 app.use('/restaurants/:id/reviews', restaurantReviewRoutes)
+app.use('/gyms', gymRoutes)
+app.use('/gyms/:id/reviews', gymReviewRoutes)
 
 
 app.get('/', (req, res) => {
