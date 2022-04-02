@@ -6,6 +6,9 @@ const map = new mapboxgl.Map({
     zoom: 8 // starting zoom
 });
 
+const mediaQuery = window.matchMedia('(min-width: 480px)');
+if (mediaQuery.matches) {
+
 map.addControl(new mapboxgl.NavigationControl());
 
 new mapboxgl.Marker()
@@ -17,3 +20,13 @@ new mapboxgl.Marker()
             )
     )
     .addTo(map)
+}
+else{
+    new mapboxgl.Marker()
+    .setLngLat(room.geometry.coordinates)
+    .setPopup(
+        new mapboxgl.Popup({ offset: 25 })
+        
+    )
+    .addTo(map)
+}
