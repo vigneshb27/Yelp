@@ -122,7 +122,7 @@ app.use(
                 "https://res.cloudinary.com/doahs2oms/", //SHOULD MATCH YOUR CLOUDINARY ACCOUNT! 
                 "https://images.unsplash.com/",
             ],
-            fontSrc: ["'self'", ...fontSrcUrls],
+          //  fontSrc: ["'self'", ...fontSrcUrls],
         },
     })
 );
