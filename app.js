@@ -121,6 +121,7 @@ app.use(
                 "data:",
                 "https://res.cloudinary.com/doahs2oms/", //SHOULD MATCH YOUR CLOUDINARY ACCOUNT! 
                 "https://images.unsplash.com/",
+                "https://s3-media0.fl.yelpcdn.com/assets/2/www/img/7922e77f338d/signup/signup_illustration.png",
             ],
           //  fontSrc: ["'self'", ...fontSrcUrls],
         },
@@ -152,6 +153,9 @@ app.use('/restaurants/:id/reviews', restaurantReviewRoutes)
 app.use('/gyms', gymRoutes)
 app.use('/gyms/:id/reviews', gymReviewRoutes)
 
+app.get('/privacy_policy', (req, res) => {
+    res.render('privacy_policy');
+})
 
 app.get('/', (req, res) => {
     res.render('home')
