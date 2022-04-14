@@ -154,7 +154,13 @@ app.use('/gyms', gymRoutes)
 app.use('/gyms/:id/reviews', gymReviewRoutes)
 
 app.get('/privacy_policy', (req, res) => {
-    res.render('privacy_policy');
+    res.render('more/privacy_policy');
+})
+app.get('/about', (req, res) => {
+    res.render('more/about');
+})
+app.get('/pricing', (req, res) => {
+    res.render('more/pricing');
 })
 
 app.get('/', (req, res) => {
