@@ -31,9 +31,9 @@ const gymRoutes = require('./routes/gyms')
 const gymReviewRoutes = require('./routes/reviews/gym');
 
 
-const dbUrl = 'mongodb://127.0.0.1:27017/yelp';//connect env
+const dbUrl = process.env.DB_URL;//connect env
 mongoose.connect(dbUrl);
-
+//mongodb://127.0.0.1:27017/yelp
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
 db.once("open", () => {
