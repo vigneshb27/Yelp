@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Poppins:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
 
 body {
     height: 100vh;
@@ -6,10 +8,12 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
     box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
     animation : slide 40s infinite;
-    
+    font-family: 'Concert One', cursive;
+    font-family: 'Poppins', sans-serif;
     
     
 }
@@ -17,6 +21,11 @@ body {
   max-width: 60vw;
 }
 
+.top{
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right:5px;
+}
 .nav-link {
     padding: 0.25rem 0;
     font-weight: 700;
@@ -46,15 +55,36 @@ body {
         background-image: url("https://res.cloudinary.com/doahs2oms/image/upload/v1649948248/YelpCamp/2560x1600-5264438-flame-burn-fire-campfire-camp-fire-night-sky-poster-happiness-happy-warm-road-trip-roadtrip-camp-wild-photography-traveling-travel-traverl-wood-lifestyle-free-stock-photos_ygwf2b.jpg");
     }
     25%{
-        background-image: url("https://res.cloudinary.com/doahs2oms/image/upload/v1649948036/YelpCamp/2560x1600-5694927-restaurant-wallpapers_iefm9h.jpg");
+        background-image: url("https://res.cloudinary.com/doahs2oms/image/upload/v1650551161/YelpCamp/-restaurant-edit_nuvamq.jpg");
     }
     50%{
-        background-image: url("https://res.cloudinary.com/doahs2oms/image/upload/v1649951529/YelpCamp/2560x1600-6061592-bedroom-design-style-bed-rooms-interior_p5zm0e.jpg");
+        background-image: url("https://res.cloudinary.com/doahs2oms/image/upload/v1650551416/YelpCamp/bedroom-edit_yqysm6.jpg");
     }
     75%{
         background-image: url("https://res.cloudinary.com/doahs2oms/image/upload/v1649943647/YelpCamp/gym_ngt5pc.jpg");
     }
     
 }
+.yelp{
+    
+    letter-spacing: 1.5px;
+    
+}
 
+.down{
+    margin-top: 10%;
+}
+.card { background-color: rgba(245, 245, 245, 0.4); }
+.card-header, .card-footer { opacity: 1}
 
+@media screen and (min-width: 880px) {
+    footer {
+      padding-top: 50px;
+    }
+  }
+
+  @media screen and (min-width: 1400px) {
+    .down {
+      margin-top: 20%;
+    }
+  }
